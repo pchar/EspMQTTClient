@@ -4,23 +4,31 @@
             "name": "Mac",
             "includePath": [
                 "${workspaceFolder}/**",
+                "/Users/pch/Library/Arduino15/**",
+                "/usr/local/Cellar/libomp/**",
                 "/Users/pch/Documents/Arduino/libraries/**",
                 "/Applications/Arduino.app/Contents/Java/libraries/**",
-                "/Users/pch/Library/Arduino15/**"
+                "/Users/pch/Library/Arduino15/packages/esp8266/hardware/esp8266/2.6.3/libraries/ESP8266mDNS/src",
+                "/"
             ],
-            "defines": [],
+            "defines": [
+                "ESP8266=1"
+            ],
             "macFrameworkPath": [
                 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks"
             ],
             "compilerPath": "/Users/pch/Library/Arduino15/packages/esp8266/tools/xtensa-lx106-elf-gcc/2.5.0-4-b40a506/bin/xtensa-lx106-elf-g++",
             "cStandard": "c11",
             "cppStandard": "c++17",
-            "intelliSenseMode": "${default}",
+            "intelliSenseMode": "clang-x64",
             "compilerArgs": [
                 "-D__ets__ ",
                 "-DICACHE_FLASH ",
                 "-U__STRICT_ANSI__"
-            ]
+            ],
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true
+            }
         }
     ],
     "version": 4
