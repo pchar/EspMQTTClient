@@ -38,7 +38,7 @@ typedef std::function<void()> DelayedExecutionCallback;
 
 class EspMQTTClient 
 {
-private:
+protected:
   // Wifi related
   bool mWifiConnected;
   unsigned long mLastWifiConnectionAttemptMillis;
