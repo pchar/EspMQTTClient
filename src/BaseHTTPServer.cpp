@@ -1,15 +1,15 @@
 
-#include "ESP32HTTPUpdateServer.h"
+#include "BaseHTTPServer.h"
 
 
-ESP32HTTPUpdateServer::ESP32HTTPUpdateServer(bool serialDebugging)
+BaseHTTPServer::BaseHTTPServer(bool serialDebugging)
   {
     _server = NULL;
     _username = "";
     _password = "";
   }
 
-  void ESP32HTTPUpdateServer::setup(WebServer* server, const char* path , const char* username , const char* password )
+  void BaseHTTPServer::setup(WebServer* server, const char* path , const char* username , const char* password )
   {
     _server = server;
     _username = username;
@@ -24,7 +24,7 @@ ESP32HTTPUpdateServer::ESP32HTTPUpdateServer(bool serialDebugging)
       _server->sendHeader("Connection", "close");
       _server->send(200, "text/html", ESP32_WEB_UPDATE_HTML);
     });
-    
+
     // Post of the file handling
     _server->on(path, HTTP_POST, [&]() {
       _server->client().setNoDelay(true);

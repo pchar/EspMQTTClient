@@ -15,7 +15,7 @@
   #define WebServer ESP8266WebServer 
   #define ESPmDNS ESP8266mDNS
   #define ESPHTTPUpdateServer ESP8266HTTPUpdateServer
-   #define UPDATE_SIZE_UNKNOWN 0xFFFFFFFF
+  #define UPDATE_SIZE_UNKNOWN 0xFFFFFFFF
 
 #else // for ESP32
 
@@ -25,7 +25,7 @@
 
 #endif
 
-
+ 
 
 #define ESP32_WEB_UPDATE_HTML "<html><body><form method='POST' action='' enctype='multipart/form-data'><input type='file' name='update'><input type='submit' value='Update'></form></body></html>"
 #define ESP32_WEB_UPDATE_SUCCESS_RESPONSE "<META http-equiv=\"refresh\" content=\"10;URL=/\">Update Success! Rebooting...\n"
